@@ -1,0 +1,232 @@
+{
+  "puzzles": [
+    {
+      "id": "exiles-lantern",
+      "title": "The Exile's Lantern",
+      "description": "A beacon of hope for those seeking freedom",
+      "metaAnswer": "Statue of Liberty",
+      "hints": [
+        "Think of a famous landmark in New York Harbor",
+        "A gift from France to America",
+        "She holds a torch and tablet"
+      ],
+      "phrases": [
+        {
+          "frequency": 44.2,
+          "modulation": 18.5,
+          "text": "a gift from across the sea, bones of copper, skin of green"
+        },
+        {
+          "frequency": 63.8,
+          "modulation": 21.1,
+          "text": "she holds fire in her hand, but it never burns"
+        },
+        {
+          "frequency": 79.7,
+          "modulation": 37.4,
+          "text": "the exiles' first vision, a sentinel of arrival"
+        },
+        {
+          "frequency": 82.0,
+          "modulation": 42.0,
+          "text": "coordinates 40°41′N 74°2′W, brighter than any star in our charts"
+        }
+      ],
+      "difficulty": "medium",
+      "category": "landmarks"
+    },
+    {
+      "id": "cosmic-messenger",
+      "title": "The Cosmic Messenger",
+      "description": "A message from the stars",
+      "metaAnswer": "Voyager Golden Record",
+      "hints": [
+        "Launched into space in 1977",
+        "Contains sounds and images of Earth",
+        "A time capsule for alien civilizations"
+      ],
+      "phrases": [
+        {
+          "frequency": 23.5,
+          "modulation": 12.3,
+          "text": "launched in 1977, carrying Earth's voice to the cosmos"
+        },
+        {
+          "frequency": 45.7,
+          "modulation": 28.9,
+          "text": "golden disc with sounds of whales and human greetings"
+        },
+        {
+          "frequency": 67.1,
+          "modulation": 35.6,
+          "text": "coordinates to Earth etched in binary code"
+        },
+        {
+          "frequency": 89.3,
+          "modulation": 41.2,
+          "text": "now beyond our solar system, still transmitting"
+        }
+      ],
+      "difficulty": "hard",
+      "category": "space"
+    },
+    {
+      "id": "digital-phoenix",
+      "title": "The Digital Phoenix",
+      "description": "Rising from the ashes of the old world",
+      "metaAnswer": "Internet",
+      "hints": [
+        "Global network connecting computers",
+        "Born from ARPANET",
+        "The information superhighway"
+      ],
+      "phrases": [
+        {
+          "frequency": 33.7,
+          "modulation": 15.4,
+          "text": "born from ARPANET, connecting universities and research"
+        },
+        {
+          "frequency": 56.2,
+          "modulation": 22.8,
+          "text": "TCP/IP protocols, the language of the network"
+        },
+        {
+          "frequency": 74.9,
+          "modulation": 38.1,
+          "text": "World Wide Web, Tim Berners-Lee's gift to humanity"
+        },
+        {
+          "frequency": 91.5,
+          "modulation": 44.7,
+          "text": "connecting billions, the nervous system of civilization"
+        }
+      ],
+      "difficulty": "easy",
+      "category": "technology"
+    },
+    {
+      "id": "cryptic-cipher",
+      "title": "The Cryptic Cipher",
+      "description": "A puzzle within a puzzle",
+      "metaAnswer": "Enigma Machine",
+      "hints": [
+        "Used by Germans in WWII",
+        "Alan Turing helped break it",
+        "Mechanical encryption device"
+      ],
+      "phrases": [
+        {
+          "frequency": 28.4,
+          "modulation": 19.7,
+          "text": "three rotors spinning, creating infinite combinations"
+        },
+        {
+          "frequency": 52.6,
+          "modulation": 25.3,
+          "text": "Bletchley Park, where the code was finally broken"
+        },
+        {
+          "frequency": 76.8,
+          "modulation": 33.9,
+          "text": "Alan Turing's bombe, the machine that defeated the machine"
+        },
+        {
+          "frequency": 94.1,
+          "modulation": 47.2,
+          "text": "U-boat communications, the key to victory"
+        }
+      ],
+      "difficulty": "hard",
+      "category": "history"
+    },
+    {
+      "id": "quantum-entanglement",
+      "title": "Quantum Entanglement",
+      "description": "Spooky action at a distance",
+      "metaAnswer": "Quantum Computing",
+      "hints": [
+        "Uses quantum mechanical phenomena",
+        "Qubits instead of bits",
+        "Exponential speedup for certain problems"
+      ],
+      "phrases": [
+        {
+          "frequency": 31.9,
+          "modulation": 17.6,
+          "text": "qubits in superposition, 0 and 1 simultaneously"
+        },
+        {
+          "frequency": 58.3,
+          "modulation": 24.1,
+          "text": "entanglement, particles connected across vast distances"
+        },
+        {
+          "frequency": 72.4,
+          "modulation": 36.8,
+          "text": "Shor's algorithm, breaking RSA encryption"
+        },
+        {
+          "frequency": 86.7,
+          "modulation": 43.5,
+          "text": "quantum supremacy, the moment machines surpassed classical limits"
+        }
+      ],
+      "difficulty": "expert",
+      "category": "science"
+    }
+  ],
+  "categories": [
+    {
+      "id": "landmarks",
+      "name": "Famous Landmarks",
+      "description": "Iconic structures and monuments around the world"
+    },
+    {
+      "id": "space",
+      "name": "Space Exploration",
+      "description": "Missions, discoveries, and cosmic phenomena"
+    },
+    {
+      "id": "technology",
+      "name": "Technology",
+      "description": "Inventions and innovations that changed the world"
+    },
+    {
+      "id": "history",
+      "name": "Historical Events",
+      "description": "Pivotal moments in human history"
+    },
+    {
+      "id": "science",
+      "name": "Scientific Concepts",
+      "description": "Breakthrough discoveries and theories"
+    }
+  ],
+  "difficulties": [
+    {
+      "id": "easy",
+      "name": "Easy",
+      "description": "Straightforward puzzles with clear clues",
+      "color": "green"
+    },
+    {
+      "id": "medium",
+      "name": "Medium",
+      "description": "Moderate challenge requiring some thinking",
+      "color": "yellow"
+    },
+    {
+      "id": "hard",
+      "name": "Hard",
+      "description": "Complex puzzles for experienced solvers",
+      "color": "orange"
+    },
+    {
+      "id": "expert",
+      "name": "Expert",
+      "description": "Extremely challenging puzzles for experts",
+      "color": "red"
+    }
+  ]
+}
