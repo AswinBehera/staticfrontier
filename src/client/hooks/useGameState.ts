@@ -10,29 +10,31 @@ const INITIAL_GAME_STATE: GameState = {
       {
         frequency: 44.2,
         modulation: 18.5,
-        text: 'a gift from across the sea, bones of copper, skin of green'
+        text: 'a gift from across the sea, bones of copper, skin of green',
       },
       {
         frequency: 63.8,
         modulation: 21.1,
-        text: 'she holds fire in her hand, but it never burns'
+        text: 'she holds fire in her hand, but it never burns',
       },
       {
         frequency: 79.7,
         modulation: 37.4,
-        text: 'the exiles\' first vision, a sentinel of arrival'
+        text: "the exiles' first vision, a sentinel of arrival",
       },
       {
         frequency: 82.0,
         modulation: 42.0,
-        text: 'coordinates 40°41′N 74°2′W, brighter than any star in our charts'
-      }
-    ]
+        text: 'coordinates 40°41′N 74°2′W, brighter than any star in our charts',
+      },
+    ],
   },
   foundPhrases: [],
   isMetaSolved: false,
-  asciiMap: Array(10).fill(null).map(() => Array(10).fill('.')),
-  userEchoPoints: 0
+  asciiMap: Array(10)
+    .fill(null)
+    .map(() => Array(10).fill('.')),
+  userEchoPoints: 0,
 };
 
 export const useGameState = () => {
@@ -55,7 +57,7 @@ export const useGameState = () => {
       }
     };
 
-    initGame();
+    void initGame();
   }, []);
 
   const checkPhrase = useCallback(async (frequency: number, modulation: number) => {
@@ -63,15 +65,15 @@ export const useGameState = () => {
       const response = await fetch('/api/game/phrase-check', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ frequency, modulation })
+        body: JSON.stringify({ frequency, modulation }),
       });
 
       if (response.ok) {
         const result: PhraseFoundResponse = await response.json();
         if (result.success && result.phrase) {
-          setGameState(prev => ({
+          setGameState((prev) => ({
             ...prev,
-            foundPhrases: [...prev.foundPhrases, result.phrase!]
+            foundPhrases: [...prev.foundPhrases, result.phrase!],
           }));
         }
       }
@@ -85,18 +87,25 @@ export const useGameState = () => {
       const response = await fetch('/api/game/meta-solve', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ answer })
+        body: JSON.stringify({ answer }),
       });
 
       if (response.ok) {
         const result: MetaSolveResponse = await response.json();
         if (result.success) {
-          setGameState(prev => ({
-            ...prev,
-            isMetaSolved: true,
-            winner: result.isWinner ? 'You' : prev.winner,
-            userEchoPoints: result.echoPoints || prev.userEchoPoints
-          }));
+          setGameState((prev) => {
+            const updatedState = {
+              ...prev,
+              isMetaSolved: true,
+              userEchoPoints: result.echoPoints || prev.userEchoPoints,
+            };
+            if (result.isWinner) {
+              updatedState.winner = 'You';
+            } else if (prev.winner) {
+              updatedState.winner = prev.winner;
+            }
+            return updatedState;
+          });
         }
         return result;
       }
@@ -111,6 +120,6 @@ export const useGameState = () => {
     gameState,
     loading,
     checkPhrase,
-    solveMeta
+    solveMeta,
   };
 };

@@ -12,11 +12,7 @@ Each puzzle is defined in `/src/shared/data/puzzles.json` and follows this struc
   "title": "Puzzle Display Name",
   "description": "Brief description of the puzzle theme",
   "metaAnswer": "The correct answer to the meta puzzle",
-  "hints": [
-    "Optional hint 1",
-    "Optional hint 2",
-    "Optional hint 3"
-  ],
+  "hints": ["Optional hint 1", "Optional hint 2", "Optional hint 3"],
   "phrases": [
     {
       "frequency": 44.2,
@@ -80,6 +76,7 @@ The signal strength indicator now works based on proximity to actual puzzle freq
 4. **Real-time Updates**: Updates as you move the dials
 
 This means:
+
 - **Strong signal** (8-10 bars): Very close to a puzzle frequency
 - **Medium signal** (4-7 bars): Moderately close
 - **Weak signal** (1-3 bars): Somewhat close
@@ -88,28 +85,36 @@ This means:
 ## Creating New Puzzles
 
 ### Step 1: Choose a Theme
+
 Pick a topic that can be broken down into 4-5 clues leading to a meta-answer.
 
 ### Step 2: Design the Meta-Answer
+
 The meta-answer should be:
+
 - A single, specific answer (not multiple possibilities)
 - Something that can be deduced from the phrases
 - Interesting and educational
 
 ### Step 3: Create the Phrases
+
 Write 4-5 phrases that:
+
 - Provide clues about the meta-answer
 - Are poetic or cryptic (not too obvious)
 - Build upon each other
 - Lead logically to the final answer
 
 ### Step 4: Assign Frequencies
+
 Choose frequency/modulation pairs that:
+
 - Are spread across the available range (0-108 MHz, 0-50%)
 - Don't overlap too closely with existing puzzles
 - Are easy to remember or have some pattern
 
 ### Step 5: Test the Puzzle
+
 - Verify all phrases can be decoded
 - Ensure the meta-answer is solvable
 - Check that hints are helpful but not too revealing
@@ -166,6 +171,7 @@ The puzzle system provides these endpoints:
 ## Integration
 
 Puzzles are automatically loaded when a new game starts. The system will:
+
 1. Select a random puzzle from the available set
 2. Convert it to the game's broadcast format
 3. Initialize the game state with the puzzle data

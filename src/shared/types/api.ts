@@ -39,6 +39,7 @@ export type GameState = {
   winner?: string;
   asciiMap: string[][];
   userEchoPoints: number;
+  username?: string;
 };
 
 export type PhraseFoundResponse = {
@@ -52,6 +53,7 @@ export type MetaSolveResponse = {
   isWinner: boolean;
   echoPoints?: number;
   message: string;
+  asciiMap?: string[][];
 };
 
 export type MapResponse = {

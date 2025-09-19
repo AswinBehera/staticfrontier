@@ -42,16 +42,18 @@ export const SignalAnimation = ({ isVisible, onComplete }: SignalAnimationProps)
         {/* Signal Detection Animation */}
         {animationPhase === 'signal' && (
           <div className="space-y-4">
-            <div className="text-green-400 text-2xl font-mono animate-pulse">
-              ████ ████ ████
-            </div>
-            <div className="text-green-300 text-sm">
-              SIGNAL DETECTED...
-            </div>
+            <div className="text-green-400 text-2xl font-mono animate-pulse">████ ████ ████</div>
+            <div className="text-green-300 text-sm">SIGNAL DETECTED...</div>
             <div className="flex justify-center space-x-1">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce"></div>
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+              <div
+                className="w-2 h-2 bg-green-400 rounded-full animate-bounce"
+                style={{ animationDelay: '0.1s' }}
+              ></div>
+              <div
+                className="w-2 h-2 bg-green-400 rounded-full animate-bounce"
+                style={{ animationDelay: '0.2s' }}
+              ></div>
             </div>
           </div>
         )}
@@ -59,12 +61,8 @@ export const SignalAnimation = ({ isVisible, onComplete }: SignalAnimationProps)
         {/* Decode Animation */}
         {animationPhase === 'decode' && (
           <div className="space-y-4">
-            <div className="text-yellow-400 text-2xl font-mono">
-              ████ ████ ████
-            </div>
-            <div className="text-yellow-300 text-sm">
-              DECODING SIGNAL...
-            </div>
+            <div className="text-yellow-400 text-2xl font-mono">████ ████ ████</div>
+            <div className="text-yellow-300 text-sm">DECODING SIGNAL...</div>
             <div className="flex justify-center">
               <div className="w-8 h-8 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
             </div>
@@ -77,13 +75,17 @@ export const SignalAnimation = ({ isVisible, onComplete }: SignalAnimationProps)
             <div className="text-green-400 text-3xl font-mono animate-pulse">
               ✓ SIGNAL DECODED ✓
             </div>
-            <div className="text-green-300 text-sm">
-              TRANSMISSION RECEIVED
-            </div>
+            <div className="text-green-300 text-sm">TRANSMISSION RECEIVED</div>
             <div className="flex justify-center space-x-2">
               <div className="w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
-              <div className="w-3 h-3 bg-green-400 rounded-full animate-ping" style={{ animationDelay: '0.2s' }}></div>
-              <div className="w-3 h-3 bg-green-400 rounded-full animate-ping" style={{ animationDelay: '0.4s' }}></div>
+              <div
+                className="w-3 h-3 bg-green-400 rounded-full animate-ping"
+                style={{ animationDelay: '0.2s' }}
+              ></div>
+              <div
+                className="w-3 h-3 bg-green-400 rounded-full animate-ping"
+                style={{ animationDelay: '0.4s' }}
+              ></div>
             </div>
           </div>
         )}
